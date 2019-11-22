@@ -1,0 +1,119 @@
+---
+layout: base
+---
+
+	
+<!--===========================
+        Start Header Slider轮播图
+===========================-->
+<section class="header_slider_area owl-carousel home_v2_header_slider">
+    <div class="header_slider_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Heating and Air Conditioning Specialist</h1>
+                    <div class="slide_button">
+                        <a href="#" class="btn-yellow">GET A FREE QUOTE</a>                    </div>
+                    <!--end .slide_button-->
+                </div><!--end .col-md-6-->
+            </div><!--end .row-->
+        </div><!--end .container-->
+    </div><!--end .header_slider_bg-->
+    <div class="header_slider_bg slider_bg2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Keep your family
+                        happy this winter,
+                        and warm.</h1>
+                    <div class="slide_button">
+                        <a href="#" class="btn-yellow">GET A FREE QUOTE</a>                    </div>
+                    <!--end .slide_button-->
+                </div><!--end .col-md-6-->
+            </div><!--end .row-->
+        </div><!--end .container-->
+    </div><!--end .header_slider_bg-->
+    <div class="header_slider_bg slider_bg3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Heating and Air Conditioning Specialist</h1>
+                    <div class="slide_button">
+                        <a href="#" class="btn-yellow">GET A FREE QUOTE</a>                    </div>
+                    <!--end .slide_button-->
+                </div><!--end .col-md-6-->
+            </div><!--end .row-->
+        </div><!--end .container-->
+    </div><!--end .header_slider_bg-->
+</section><!--end .header_slider_area-->
+<!--===========================
+        End Header Slider
+===========================-->
+<!-- 文章列表 -->
+	{% for post in paginator.posts %}
+ 	<div>
+        <div class="blog">
+            <h1><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+            <p>{{post.zhaiyao}}</p>
+            <h5>作者：{{post.author|default:site.author}} 时间：{{post.date|date_to_long_string}}</h5>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- 分页 -->
+    <div class="btn_page">
+        {% if paginator.previous_page %}
+            <a href="{{site.baseurl}}{{paginator.previous_page_path}}" class="btn btn-primary">上一页</a>
+        {% endif %}
+
+        {% if paginator.next_page %}
+            <a href="{{site.baseurl}}{{paginator.next_page_path}}" class="btn btn-primary next">下一页</a>
+        {% endif %}
+    </div>
+
+   <!-- 视频 -->
+   <!--===========================
+        Start Video Promotion
+===========================-->
+<section class="video_promotion_area text-center">
+    <div class="overlay">
+        <a href="#videostore" class="video-img"
+           data-video="" title="Play Icon" id="videolink">
+            <span class="video-play"><i class="fa fa-play"></i></span>
+        </a>
+        <h1>Watch how we work</h1>
+        <div id="videostore" class="mfp-hide text-center">
+            <!--<iframe src="https://www.youtube.com/embed/A7ZkZazfvao" allow="autoplay;encrypted-media" allowfullscreen></iframe>-->
+        </div><!--end #videostore-->
+    </div><!--end .overlay-->
+</section><!--end .video_promotion_area-->
+<!--===========================
+        End Video Promotion
+===========================-->
+
+<!--===========================
+        Start Blog
+===========================-->
+
+<!--===========================
+        End Blog
+===========================-->
+
+<!--===========================
+        Start Contact Form
+===========================-->
+<section class="call_to_action">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                <h1>No matter what your question is, here are your answers</h1>
+            </div><!--end .col-md-9-->
+            <div class="col-md-3 col-sm-4 col-xs-12 text-right cta_responsive_left">
+                <a href="" class="btn-gray"> answer</a>
+            </div><!--end .col-md-3-->
+        </div><!--end .row-->
+    </div><!--end .container-->
+</section><!--end .call_to_action-->
+<!--===========================
+        End CTA
+===========================-->

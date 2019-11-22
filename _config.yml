@@ -1,0 +1,6 @@
+baseurl: /test
+author: 小明
+
+#分页
+paginate: 4
+plugins: [jekyll-paginate]

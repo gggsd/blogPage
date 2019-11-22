@@ -1,0 +1,24 @@
+---
+layout: base
+---
+
+
+<!-- 文章内容 -->
+
+<div class="list">
+	{{content}}
+
+</div>
+<div class="btn_page">
+	{% if page.next %}
+		<a href="{{site.baseurl}}{{page.next.url}}" class="btn btn-primary ">上一篇：{{page.next.title}}</a>
+	{% else %}
+		<span class="btn btn-primary">位置：第一篇，请往下查看</span>
+	{% endif %}
+
+	{% if page.previous %}
+		<a href="{{site.baseurl}}{{page.previous.url}}" class="btn btn-primary next">下一篇：{{page.previous.title}}</a>
+	{% else %}
+		<span class="btn btn-primary next">位置：已到达最后一篇</span>
+	{% endif %}
+</div>
